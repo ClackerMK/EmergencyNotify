@@ -9,4 +9,8 @@
         If you are detained to call your parents or friends for help, you can just pick a message and press this button.
         They will get your notification. Do only use in emergency situations.
         No one will help you, if you use this application abusive.</string>
+    <string name="initiates_a_broadcast_on_a_big_selectin_of_transmission_types">Initiates a broadcast on a big selectin of transmission types.</string>
+    <string name="initiates_a_broadcast_on_a_small_selection_of_transmission_types">Initiates a broadcast on a smallselection of transmission types.</string>
+    <string name="notify_big">Notify big</string>
+    <string name="notify_small">Notify small</string>
 </resources>
