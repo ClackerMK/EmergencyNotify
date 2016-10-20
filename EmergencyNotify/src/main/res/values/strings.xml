@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EmergencyNotify</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="abusive_use">This application tries to help you in extreme situations.
+        If you are detained to call your parents or friends for help, you can just pick a message and press this button.
+        They will get your notification. Do only use in emergency situations.
+        No one will help you, if you use this application abusive.</string>
+</resources>
