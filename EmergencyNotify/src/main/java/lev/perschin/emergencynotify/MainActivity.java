@@ -17,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import lev.perschin.emergencynotify.information.PersonalInformation;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -121,12 +123,8 @@ public class MainActivity extends AppCompatActivity
         Button notifyButton = (Button) findViewById(R.id.notifyButton);
         Button notifyButtonBig = (Button) findViewById(R.id.notifyButtonBig);
 
-        notifyButton.setOnClickListener(e -> {
-            sendSmallGroup();
-        });
-        notifyButtonBig.setOnClickListener(v -> {
-            sendBigGroup();
-        });
+        notifyButton.setOnClickListener(e1 -> sendSmallGroup());
+        notifyButtonBig.setOnClickListener(e2 -> sendBigGroup());
     }
 
     /**
@@ -136,6 +134,9 @@ public class MainActivity extends AppCompatActivity
         // TODO: Vibrating
         // TODO: Getting information
         // TODO: Sending information
+        PersonalInformation personalInformation = new PersonalInformation(this);
+
+        // Notify user
         String message = "Sent on small selection.";
         Snackbar snackbar = Snackbar.make(findViewById(R.id.content_main), message, Snackbar.LENGTH_LONG);
         snackbar.show();
@@ -145,6 +146,8 @@ public class MainActivity extends AppCompatActivity
      * Send notification on a big amount/ on all possibilities of notification types.
      */
     private void sendBigGroup() {
+
+        // Notify user
         String message = "Sent on BIG selection.";
         Snackbar snackbar = Snackbar.make(findViewById(R.id.content_main), message, Snackbar.LENGTH_LONG);
         snackbar.show();
