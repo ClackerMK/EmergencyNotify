@@ -7,7 +7,7 @@ import lev.perschin.emergencynotify.info.PersonalInformation;
  * e-mail: lev.perschin@gmail.com
  */
 
-public class SMSNotify extends Notify {
+public class EMailNotify extends Notify {
     @Override
     public void send(PersonalInformation pi) {
         super.send(pi);

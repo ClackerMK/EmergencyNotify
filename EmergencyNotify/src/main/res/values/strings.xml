@@ -13,4 +13,9 @@
     <string name="initiates_a_broadcast_on_a_small_selection_of_transmission_types">Initiates a broadcast on a smallselection of transmission types.</string>
     <string name="notify_big">Notify big</string>
     <string name="notify_small">Notify small</string>
+    <string name="title_activity_user_information">UserInformationActivity</string>
+    <string name="forename">Forename</string>
+    <string name="surname">Surname</string>
+    <string name="sent_small">Sent on small selection.</string>
+    <string name="sent_big">Sent on BIG selection.</string>
 </resources>

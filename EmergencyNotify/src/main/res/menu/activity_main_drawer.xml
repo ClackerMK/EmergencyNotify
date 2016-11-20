@@ -10,5 +10,9 @@
             android:id="@+id/nav_notificationType"
             android:icon="@drawable/ic_menu_manage"
             android:title="Type of notification" />
+        <item
+            android:id="@+id/nav_userInformation"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="User information" />
     </group>
 </menu>

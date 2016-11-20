@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_user_information"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="lev.perschin.emergencynotify.UserInformationActivity"
+    tools:showIn="@layout/activity_user_information">
+
+    <EditText
+        android:id="@+id/forename"
+        android:layout_width="255dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/forename"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
+    <EditText
+        android:id="@+id/surname"
+        android:layout_width="255dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/surname"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/forename" />
+
+    <TextView
+        android:text="Forename"
+        android:layout_width="85dp"
+        android:layout_height="42dp"
+        android:id="@+id/textView1"
+        app:layout_constraintRight_toLeftOf="@+id/forename"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:gravity="center" />
+
+    <TextView
+        android:text="Surname"
+        android:layout_width="85dp"
+        android:layout_height="42dp"
+        android:id="@+id/textView2"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintRight_toLeftOf="@+id/surname"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center" />
+
+</android.support.constraint.ConstraintLayout>
