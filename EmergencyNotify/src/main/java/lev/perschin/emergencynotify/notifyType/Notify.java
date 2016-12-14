@@ -10,11 +10,11 @@ import lev.perschin.emergencynotify.info.PersonalInformation;
  */
 
 abstract class Notify {
-    public Notify() {
-    }
+    abstract protected void send(PersonalInformation pi);
 
-    public void send(PersonalInformation pi) {
-        Log.v("Notify", "Notify send.");
+    final public void notify(PersonalInformation pi) {
         Log.v("Notify", "Sending information about: " + pi.getForename() + ", " + pi.getSurname());
+        send(pi);
+        Log.v("Notify", "Notification send");
     }
 }

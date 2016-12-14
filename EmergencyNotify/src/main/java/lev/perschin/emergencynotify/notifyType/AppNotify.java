@@ -10,6 +10,6 @@ import lev.perschin.emergencynotify.info.PersonalInformation;
 public class AppNotify extends Notify {
     @Override
     public void send(PersonalInformation pi) {
-        super.send(pi);
+
     }
 }
