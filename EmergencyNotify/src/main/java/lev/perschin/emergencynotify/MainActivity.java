@@ -112,19 +112,29 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void noteAbusiveUse() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(R.string.abusive_use)
-                .setPositiveButton("I accept", (dialog, id) -> {
-                    dialog.cancel();
-                    noteEmptyPersonalInfo();
-                })
-                .setNegativeButton("I decline", (dialog, id) -> finish())
-                .setTitle("No abusive use.");
-        builder.create().show();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!prefs.getBoolean("readAbusiveUse", false)) {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage(R.string.abusive_use)
+                    .setPositiveButton("I accept", (dialog, id) -> {
+                        dialog.cancel();
+
+                        // Set flag for reading abusive note
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("readAbusiveUse", true);
+                        editor.apply();
+                        noteEmptyPersonalInfo();
+                    })
+                    .setNegativeButton("I decline", (dialog, id) -> finish())
+                    .setTitle("No abusive use.");
+            builder.create().show();
+        } else {
+            noteEmptyPersonalInfo();
+        }
     }
 
     private void noteEmptyPersonalInfo() {
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
         Log.i("blub", prefs.getString("forename", ""));
         Log.i("blub", prefs.getString("surname", ""));
         if (prefs.getString("forename", "").equals("")
