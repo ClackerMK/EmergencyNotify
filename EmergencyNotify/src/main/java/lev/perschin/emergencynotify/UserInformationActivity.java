@@ -26,17 +26,17 @@ public class UserInformationActivity extends AppCompatActivity {
         EditText forename = (EditText) findViewById(R.id.forename);
         EditText surname = (EditText) findViewById(R.id.surname);
 
-        setTextChangedListener(forename);
-        setTextChangedListener(surname);
+        setTextChangedListener(forename, "forename");
+        setTextChangedListener(surname, "surname");
 
     }
 
     /**
      * Sets up EditText connection to Shared Preferences.
      */
-    private void setTextChangedListener(EditText editText) {
+    private void setTextChangedListener(EditText editText, String name) {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        editText.setText(prefs.getString(String.valueOf(editText.getId()), ""));
+        editText.setText(prefs.getString(name, ""));
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -48,7 +48,7 @@ public class UserInformationActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                prefs.edit().putString(String.valueOf(editText.getId()), s.toString()).apply();
+                prefs.edit().putString(name, s.toString()).apply();
             }
         });
     }
