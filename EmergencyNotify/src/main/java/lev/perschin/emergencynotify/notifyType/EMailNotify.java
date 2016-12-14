@@ -9,7 +9,7 @@ import lev.perschin.emergencynotify.info.PersonalInformation;
 
 public class EMailNotify extends Notify {
     @Override
-    public void send(PersonalInformation pi) {
-        super.send(pi);
+    protected void send(PersonalInformation pi) {
+
     }
 }
