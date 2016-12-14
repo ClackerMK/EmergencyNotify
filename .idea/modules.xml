@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/EmergencyNotify.iml" filepath="$PROJECT_DIR$/EmergencyNotify.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EmergencyNotify/EmergencyNotify-EmergencyNotify.iml" filepath="$PROJECT_DIR$/EmergencyNotify/EmergencyNotify-EmergencyNotify.iml" />
-    </modules>
-  </component>
-</project>
